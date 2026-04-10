@@ -1,0 +1,192 @@
+:root {
+  --green-dark: #1F3D2B;
+  --green-mid: #3F6B4B;
+  --green-light: #A7C4A0;
+  --gold: #C2A46D;
+  --copper: #8C5A2B;
+  --cream: #F5F1E8;
+  --text: #2C2C2C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  width: 10%;
+}
+
+/* HERO */
+.hero {
+  background: 
+    url("image-1920x1080px_notegpt_NatureIrelandFogFlute.png") center/contain no-repeat;
+  height: 90vh;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(31, 61, 43, 0.75);
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.overlay p {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.btn {
+  padding: 12px 20px;
+  background: var(--gold);
+  color: white;
+  text-decoration: none;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+
+/* NAV (mobile-first) */
+nav {
+  background: var(--green-dark);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  background: var(--green-mid);
+}
+
+/* SECTIONS */
+section {
+  padding: 40px 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: var(--green-dark);
+}
+
+ul {
+  margin-left: 20px;
+}
+
+/* CARDS (für Events optional) */
+ul li {
+  margin-bottom: 8px;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin-bottom: 10px;
+  padding: 12px;
+  border: 1px solid var(--green-light);
+  border-radius: 4px;
+}
+
+button {
+  background: var(--green-dark);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--copper);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--green-dark);
+  color: white;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .overlay h1 {
+    font-size: 2.8rem;
+  }
+
+  section {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .overlay h1 {
+    font-size: 3.5rem;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  section {
+    max-width: 900px;
+  }
+}
+.two-col {
+  display: flex;
+  flex-direction: column; /* Mobile: untereinander */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Bild */
+.two-col img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Tablet & größer */
+@media (min-width: 768px) {
+  .two-col {
+    flex-direction: row; /* nebeneinander */
+    align-items: center;
+  }
+
+  .two-col .text {
+    flex: 1; /* nimmt Platz */
+  }
+
+  .two-col .image {
+    flex: 1;
+  }
+}
